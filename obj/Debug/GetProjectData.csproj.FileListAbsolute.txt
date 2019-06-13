@@ -18,3 +18,26 @@ C:\Users\ctaylor\OneDrive -Personal\OneDrive\Documents\Training 2019\DQIProjectA
 C:\Users\ctaylor\OneDrive -Personal\OneDrive\Documents\Training 2019\DQIProjectAddin\GetProjectData\obj\Debug\GetProjectData.dll
 C:\Users\ctaylor\OneDrive -Personal\OneDrive\Documents\Training 2019\DQIProjectAddin\GetProjectData\obj\Debug\GetProjectData.pdb
 C:\Users\ctaylor\OneDrive -Personal\OneDrive\Documents\Training 2019\DQIProjectAddin\GetProjectData\obj\Debug\GetProjectData.csprojAssemblyReference.cache
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\obj\Debug\GetProjectData.csprojAssemblyReference.cache
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\obj\Debug\GetProjectData.Properties.Resources.resources
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\obj\Debug\GetProjectData.csproj.GenerateResource.cache
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\obj\Debug\GetProjectData.csproj.CoreCompileInputs.cache
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\obj\Debug\GetProjectData.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\obj\Debug\GetProjectData.pdb
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\GetProjectData.dll.config
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\GetProjectData.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\GetProjectData.pdb
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\GetProjectData.dll.manifest
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\GetProjectData.vsto
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\DQIDB.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\DQIDB.pdb
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\DQIDB.dll.config
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\obj\Debug\GetProjectData.csproj.CopyComplete
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\DQILogger.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\Serilog.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\Serilog.Sinks.File.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\DQILogger.pdb
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\Serilog.pdb
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\Serilog.xml
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\Serilog.Sinks.File.xml

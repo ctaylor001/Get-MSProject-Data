@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DQIModelStoreContainer" CdmEntityContainer="DQIEntities">
+    <EntitySetMapping Name="DMSBatchControlLogs">
+      <EntityTypeMapping TypeName="DQIModel.DMSBatchControlLog">
+        <MappingFragment StoreEntitySet="DMSBatchControlLog">
+          <ScalarProperty Name="DMSBatchControlLogID" ColumnName="DMSBatchControlLogID" />
+          <ScalarProperty Name="BatchNumber" ColumnName="BatchNumber" />
+          <ScalarProperty Name="BatchName" ColumnName="BatchName" />
+          <ScalarProperty Name="BatchDate" ColumnName="BatchDate" />
+          <ScalarProperty Name="HDSExtract" ColumnName="HDSExtract" />
+          <ScalarProperty Name="HDSExtractDate" ColumnName="HDSExtractDate" />
+          <ScalarProperty Name="MinPropertyId" ColumnName="MinPropertyId" />
+          <ScalarProperty Name="MaxPropertyId" ColumnName="MaxPropertyId" />
+          <ScalarProperty Name="SynchProject" ColumnName="SynchProject" />
+          <ScalarProperty Name="SynchSharePoint" ColumnName="SynchSharePoint" />
+          <ScalarProperty Name="SynchMDS" ColumnName="SynchMDS" />
+          <ScalarProperty Name="SynchHDS" ColumnName="SynchHDS" />
+          <ScalarProperty Name="SynchProjectDateTime" ColumnName="SynchProjectDateTime" />
+          <ScalarProperty Name="SynchSharePointDateTime" ColumnName="SynchSharePointDateTime" />
+          <ScalarProperty Name="SynchMDSDateTime" ColumnName="SynchMDSDateTime" />
+          <ScalarProperty Name="SynchHDSDateTime" ColumnName="SynchHDSDateTime" />
+          <ScalarProperty Name="MSProjLocation" ColumnName="MSProjLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grh_Assignments">
+      <EntityTypeMapping TypeName="DQIModel.Grh_Assignments">
+        <MappingFragment StoreEntitySet="Grh_Assignments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Task_Name" ColumnName="Task_Name" />
+          <ScalarProperty Name="Resource_Name" ColumnName="Resource_Name" />
+          <ScalarProperty Name="Percent_Work_Complete" ColumnName="Percent_Work_Complete" />
+          <ScalarProperty Name="C__Complete" ColumnName="% Complete" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Actual_Work" ColumnName="Actual_Work" />
+          <ScalarProperty Name="Scheduled_Work" ColumnName="Scheduled_Work" />
+          <ScalarProperty Name="nActualWork" ColumnName="nActualWork" />
+          <ScalarProperty Name="nScheduled_Work" ColumnName="nScheduled_Work" />
+          <ScalarProperty Name="nDuration" ColumnName="nDuration" />
+          <ScalarProperty Name="xDuration" ColumnName="xDuration" />
+          <ScalarProperty Name="xActual_work" ColumnName="xActual_work" />
+          <ScalarProperty Name="xSchedule_work" ColumnName="xSchedule_work" />
+          <ScalarProperty Name="Finish_Date" ColumnName="Finish_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grh_Tasks">
+      <EntityTypeMapping TypeName="DQIModel.Grh_Tasks">
+        <MappingFragment StoreEntitySet="Grh_Tasks">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ResourceNames" ColumnName="ResourceNames" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Finish_Date" ColumnName="Finish_Date" />
+          <ScalarProperty Name="OutlineLevel" ColumnName="OutlineLevel" />
+          <ScalarProperty Name="C__Complete" ColumnName="% Complete" />
+          <ScalarProperty Name="Text21" ColumnName="Text21" />
+          <ScalarProperty Name="Resource_Role" ColumnName="Resource_Role" />
+          <ScalarProperty Name="IsAProperty" ColumnName="IsAProperty" />
+          <ScalarProperty Name="FhFcPropertyID" ColumnName="FhFcPropertyID" />
+          <ScalarProperty Name="IsAFundSource" ColumnName="IsAFundSource" />
+          <ScalarProperty Name="OutlineNumber" ColumnName="OutlineNumber" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRJ_Assignment_Table">
+      <EntityTypeMapping TypeName="DQIModel.PRJ_Assignment_Table">
+        <MappingFragment StoreEntitySet="PRJ_Assignment_Table">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Task_Name" ColumnName="Task Name" />
+          <ScalarProperty Name="Resource_Name" ColumnName="Resource Name" />
+          <ScalarProperty Name="C__Work_Complete" ColumnName="% Work Complete" />
+          <ScalarProperty Name="Work" ColumnName="Work" />
+          <ScalarProperty Name="Units" ColumnName="Units" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Resource_Table">
+      <EntityTypeMapping TypeName="DQIModel.Resource_Table">
+        <MappingFragment StoreEntitySet="Resource_Table">
+          <ScalarProperty Name="Resource_tableID" ColumnName="Resource_tableID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Material_Label" ColumnName="Material_Label" />
+          <ScalarProperty Name="Initials" ColumnName="Initials" />
+          <ScalarProperty Name="Group_Name" ColumnName="Group_Name" />
+          <ScalarProperty Name="Max_Units" ColumnName="Max_Units" />
+          <ScalarProperty Name="Standard_Rate" ColumnName="Standard_Rate" />
+          <ScalarProperty Name="Overtime_Rate" ColumnName="Overtime_Rate" />
+          <ScalarProperty Name="Cost_Per_Use" ColumnName="Cost_Per_Use" />
+          <ScalarProperty Name="Accrue_At" ColumnName="Accrue_At" />
+          <ScalarProperty Name="Base_Calendar" ColumnName="Base_Calendar" />
+          <ScalarProperty Name="Department_Sequence" ColumnName="Department_Sequence" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRj_TaskTemplate">
+      <EntityTypeMapping TypeName="DQIModel.PRj_TaskTemplate">
+        <MappingFragment StoreEntitySet="PRj_TaskTemplate">
+          <ScalarProperty Name="Taskid" ColumnName="Taskid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Task_Mode" ColumnName="Task Mode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Start" ColumnName="Start" />
+          <ScalarProperty Name="Finish" ColumnName="Finish" />
+          <ScalarProperty Name="Predecessors" ColumnName="Predecessors" />
+          <ScalarProperty Name="Outline_Level" ColumnName="Outline Level" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Resource_Name" ColumnName="Resource Name" />
+          <ScalarProperty Name="C__Work_Complete" ColumnName="% Work Complete" />
+          <ScalarProperty Name="Work" ColumnName="Work" />
+          <ScalarProperty Name="Units" ColumnName="Units" />
+          <ScalarProperty Name="Work_Item_ID" ColumnName="Work_Item_ID" />
+          <ScalarProperty Name="Area_Path" ColumnName="Area_Path" />
+          <ScalarProperty Name="Work_Item_Type" ColumnName="Work_Item_Type" />
+          <ScalarProperty Name="Iteration_Path" ColumnName="Iteration_Path" />
+          <ScalarProperty Name="Publish_and_Refresh" ColumnName="Publish_and_Refresh" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="PrePred" ColumnName="PrePred" />
+          <ScalarProperty Name="Batchid" ColumnName="Batchid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

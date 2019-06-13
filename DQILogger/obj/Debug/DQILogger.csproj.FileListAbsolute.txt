@@ -1,0 +1,6 @@
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQILogger\bin\Debug\DQILogger.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQILogger\bin\Debug\DQILogger.pdb
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQILogger\obj\Debug\DQILogger.csprojAssemblyReference.cache
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQILogger\obj\Debug\DQILogger.csproj.CoreCompileInputs.cache
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQILogger\obj\Debug\DQILogger.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQILogger\obj\Debug\DQILogger.pdb

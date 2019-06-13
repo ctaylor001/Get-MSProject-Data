@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DQIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DMSBatchControlLog">
+    <Key>
+      <PropertyRef Name="DMSBatchControlLogID" />
+    </Key>
+    <Property Name="DMSBatchControlLogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BatchNumber" Type="Int32" />
+    <Property Name="BatchName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BatchDate" Type="DateTime" Precision="0" />
+    <Property Name="HDSExtract" Type="Boolean" />
+    <Property Name="HDSExtractDate" Type="DateTime" Precision="0" />
+    <Property Name="MinPropertyId" Type="Int32" />
+    <Property Name="MaxPropertyId" Type="Int32" />
+    <Property Name="SynchProject" Type="Boolean" />
+    <Property Name="SynchSharePoint" Type="Boolean" />
+    <Property Name="SynchMDS" Type="Boolean" />
+    <Property Name="SynchHDS" Type="Boolean" />
+    <Property Name="SynchProjectDateTime" Type="DateTime" Precision="3" />
+    <Property Name="SynchSharePointDateTime" Type="DateTime" Precision="3" />
+    <Property Name="SynchMDSDateTime" Type="DateTime" Precision="3" />
+    <Property Name="SynchHDSDateTime" Type="DateTime" Precision="3" />
+    <Property Name="MSProjLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Grh_Assignments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Task_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Resource_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Percent_Work_Complete" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C__Complete" Type="Double" />
+    <Property Name="Duration" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Actual_Work" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Scheduled_Work" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="nActualWork" Type="Double" />
+    <Property Name="nScheduled_Work" Type="Double" />
+    <Property Name="nDuration" Type="Double" />
+    <Property Name="xDuration" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="xActual_work" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="xSchedule_work" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Finish_Date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Grh_Tasks">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ResourceNames" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Duration" Type="Int32" />
+    <Property Name="Finish_Date" Type="DateTime" Precision="3" />
+    <Property Name="OutlineLevel" Type="Int32" />
+    <Property Name="C__Complete" Type="Int32" />
+    <Property Name="Text21" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Resource_Role" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsAProperty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FhFcPropertyID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsAFundSource" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OutlineNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PRJ_Assignment_Table">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Task_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Resource_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C__Work_Complete" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Work" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Units" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Resource_Table">
+    <Key>
+      <PropertyRef Name="Resource_tableID" />
+    </Key>
+    <Property Name="Resource_tableID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Material_Label" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Initials" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Group_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Max_Units" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Standard_Rate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Overtime_Rate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Cost_Per_Use" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Accrue_At" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Base_Calendar" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Department_Sequence" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PRj_TaskTemplate">
+    <Key>
+      <PropertyRef Name="Taskid" />
+    </Key>
+    <Property Name="Taskid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID" Type="Int32" />
+    <Property Name="Active" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Task_Mode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Duration" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Start" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Finish" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Predecessors" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Outline_Level" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Resource_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C__Work_Complete" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Work" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Units" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Work_Item_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Area_Path" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Work_Item_Type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Iteration_Path" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Publish_and_Refresh" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="department" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Sequence" Type="Int32" />
+    <Property Name="PrePred" Type="Int32" />
+    <Property Name="Batchid" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="DQIEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DMSBatchControlLogs" EntityType="Self.DMSBatchControlLog" />
+    <EntitySet Name="Grh_Assignments" EntityType="Self.Grh_Assignments" />
+    <EntitySet Name="Grh_Tasks" EntityType="Self.Grh_Tasks" />
+    <EntitySet Name="PRJ_Assignment_Table" EntityType="Self.PRJ_Assignment_Table" />
+    <EntitySet Name="Resource_Table" EntityType="Self.Resource_Table" />
+    <EntitySet Name="PRj_TaskTemplate" EntityType="Self.PRj_TaskTemplate" />
+  </EntityContainer>
+</Schema>

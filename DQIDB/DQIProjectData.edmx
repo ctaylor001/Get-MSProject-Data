@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DQIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DMSBatchControlLog">
+          <Key>
+            <PropertyRef Name="DMSBatchControlLogID" />
+          </Key>
+          <Property Name="DMSBatchControlLogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BatchNumber" Type="int" />
+          <Property Name="BatchName" Type="nvarchar" MaxLength="50" />
+          <Property Name="BatchDate" Type="date" />
+          <Property Name="HDSExtract" Type="bit" />
+          <Property Name="HDSExtractDate" Type="date" />
+          <Property Name="MinPropertyId" Type="int" />
+          <Property Name="MaxPropertyId" Type="int" />
+          <Property Name="SynchProject" Type="bit" />
+          <Property Name="SynchSharePoint" Type="bit" />
+          <Property Name="SynchMDS" Type="bit" />
+          <Property Name="SynchHDS" Type="bit" />
+          <Property Name="SynchProjectDateTime" Type="datetime" />
+          <Property Name="SynchSharePointDateTime" Type="datetime" />
+          <Property Name="SynchMDSDateTime" Type="datetime" />
+          <Property Name="SynchHDSDateTime" Type="datetime" />
+          <Property Name="MSProjLocation" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Grh_Assignments">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Task_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Resource_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Percent_Work_Complete" Type="nvarchar" MaxLength="255" />
+          <Property Name="% Complete" Type="float" />
+          <Property Name="Duration" Type="nvarchar" MaxLength="50" />
+          <Property Name="Actual_Work" Type="nvarchar" MaxLength="255" />
+          <Property Name="Scheduled_Work" Type="nvarchar" MaxLength="255" />
+          <Property Name="nActualWork" Type="float" />
+          <Property Name="nScheduled_Work" Type="float" />
+          <Property Name="nDuration" Type="float" />
+          <Property Name="xDuration" Type="nvarchar" MaxLength="50" />
+          <Property Name="xActual_work" Type="nvarchar" MaxLength="50" />
+          <Property Name="xSchedule_work" Type="nvarchar" MaxLength="50" />
+          <Property Name="Finish_Date" Type="date" />
+        </EntityType>
+        <EntityType Name="Grh_Tasks">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Status" Type="nvarchar" MaxLength="255" />
+          <Property Name="ResourceNames" Type="nvarchar" MaxLength="255" />
+          <Property Name="Duration" Type="int" />
+          <Property Name="Finish_Date" Type="datetime" />
+          <Property Name="OutlineLevel" Type="int" />
+          <Property Name="% Complete" Type="int" />
+          <Property Name="Text21" Type="nvarchar" MaxLength="255" />
+          <Property Name="Resource_Role" Type="nvarchar" MaxLength="255" />
+          <Property Name="IsAProperty" Type="nvarchar" MaxLength="50" />
+          <Property Name="FhFcPropertyID" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsAFundSource" Type="nvarchar" MaxLength="50" />
+          <Property Name="OutlineNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Note" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="PRJ_Assignment_Table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Task Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Resource Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="% Work Complete" Type="nvarchar" MaxLength="255" />
+          <Property Name="Work" Type="nvarchar" MaxLength="255" />
+          <Property Name="Units" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DQI.dbo.PRj_TaskTemplate' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PRj_TaskTemplate">
+          <Key>
+            <PropertyRef Name="Taskid" />
+          </Key>
+          <Property Name="Taskid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID" Type="int" />
+          <Property Name="Active" Type="nvarchar" MaxLength="255" />
+          <Property Name="Task Mode" Type="nvarchar" MaxLength="255" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Duration" Type="nvarchar" MaxLength="255" />
+          <Property Name="Start" Type="nvarchar" MaxLength="255" />
+          <Property Name="Finish" Type="nvarchar" MaxLength="255" />
+          <Property Name="Predecessors" Type="nvarchar" MaxLength="255" />
+          <Property Name="Outline Level" Type="nvarchar" MaxLength="255" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="255" />
+          <Property Name="Resource Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="% Work Complete" Type="nvarchar" MaxLength="255" />
+          <Property Name="Work" Type="nvarchar" MaxLength="255" />
+          <Property Name="Units" Type="nvarchar" MaxLength="255" />
+          <Property Name="Work_Item_ID" Type="varchar" MaxLength="255" />
+          <Property Name="Area_Path" Type="varchar" MaxLength="255" />
+          <Property Name="Work_Item_Type" Type="varchar" MaxLength="255" />
+          <Property Name="Iteration_Path" Type="varchar" MaxLength="255" />
+          <Property Name="Publish_and_Refresh" Type="varchar" MaxLength="255" />
+          <Property Name="department" Type="nvarchar" MaxLength="255" />
+          <Property Name="Sequence" Type="int" />
+          <Property Name="PrePred" Type="int" />
+          <Property Name="Batchid" Type="int" />
+        </EntityType>
+        <EntityType Name="Resource_Table">
+          <Key>
+            <PropertyRef Name="Resource_tableID" />
+          </Key>
+          <Property Name="Resource_tableID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="255" />
+          <Property Name="Material_Label" Type="nvarchar" MaxLength="255" />
+          <Property Name="Initials" Type="nvarchar" MaxLength="255" />
+          <Property Name="Group_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Max_Units" Type="nvarchar" MaxLength="255" />
+          <Property Name="Standard_Rate" Type="nvarchar" MaxLength="255" />
+          <Property Name="Overtime_Rate" Type="nvarchar" MaxLength="255" />
+          <Property Name="Cost_Per_Use" Type="nvarchar" MaxLength="255" />
+          <Property Name="Accrue_At" Type="nvarchar" MaxLength="255" />
+          <Property Name="Base_Calendar" Type="nvarchar" MaxLength="255" />
+          <Property Name="Department_Sequence" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="DQIModelStoreContainer">
+          <EntitySet Name="DMSBatchControlLog" EntityType="Self.DMSBatchControlLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Grh_Assignments" EntityType="Self.Grh_Assignments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Grh_Tasks" EntityType="Self.Grh_Tasks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PRJ_Assignment_Table" EntityType="Self.PRJ_Assignment_Table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Resource_Table" EntityType="Self.Resource_Table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PRj_TaskTemplate" EntityType="Self.PRj_TaskTemplate" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PRj_TaskTemplate].[Taskid] AS [Taskid], 
+    [PRj_TaskTemplate].[ID] AS [ID], 
+    [PRj_TaskTemplate].[Active] AS [Active], 
+    [PRj_TaskTemplate].[Task Mode] AS [Task Mode], 
+    [PRj_TaskTemplate].[Name] AS [Name], 
+    [PRj_TaskTemplate].[Duration] AS [Duration], 
+    [PRj_TaskTemplate].[Start] AS [Start], 
+    [PRj_TaskTemplate].[Finish] AS [Finish], 
+    [PRj_TaskTemplate].[Predecessors] AS [Predecessors], 
+    [PRj_TaskTemplate].[Outline Level] AS [Outline Level], 
+    [PRj_TaskTemplate].[Notes] AS [Notes], 
+    [PRj_TaskTemplate].[Resource Name] AS [Resource Name], 
+    [PRj_TaskTemplate].[% Work Complete] AS [% Work Complete], 
+    [PRj_TaskTemplate].[Work] AS [Work], 
+    [PRj_TaskTemplate].[Units] AS [Units], 
+    [PRj_TaskTemplate].[Work_Item_ID] AS [Work_Item_ID], 
+    [PRj_TaskTemplate].[Area_Path] AS [Area_Path], 
+    [PRj_TaskTemplate].[Work_Item_Type] AS [Work_Item_Type], 
+    [PRj_TaskTemplate].[Iteration_Path] AS [Iteration_Path], 
+    [PRj_TaskTemplate].[Publish_and_Refresh] AS [Publish_and_Refresh], 
+    [PRj_TaskTemplate].[department] AS [department], 
+    [PRj_TaskTemplate].[Sequence] AS [Sequence], 
+    [PRj_TaskTemplate].[PrePred] AS [PrePred], 
+    [PRj_TaskTemplate].[Batchid] AS [Batchid]
+    FROM [dbo].[PRj_TaskTemplate] AS [PRj_TaskTemplate]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DQIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DMSBatchControlLog">
+          <Key>
+            <PropertyRef Name="DMSBatchControlLogID" />
+          </Key>
+          <Property Name="DMSBatchControlLogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BatchNumber" Type="Int32" />
+          <Property Name="BatchName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BatchDate" Type="DateTime" Precision="0" />
+          <Property Name="HDSExtract" Type="Boolean" />
+          <Property Name="HDSExtractDate" Type="DateTime" Precision="0" />
+          <Property Name="MinPropertyId" Type="Int32" />
+          <Property Name="MaxPropertyId" Type="Int32" />
+          <Property Name="SynchProject" Type="Boolean" />
+          <Property Name="SynchSharePoint" Type="Boolean" />
+          <Property Name="SynchMDS" Type="Boolean" />
+          <Property Name="SynchHDS" Type="Boolean" />
+          <Property Name="SynchProjectDateTime" Type="DateTime" Precision="3" />
+          <Property Name="SynchSharePointDateTime" Type="DateTime" Precision="3" />
+          <Property Name="SynchMDSDateTime" Type="DateTime" Precision="3" />
+          <Property Name="SynchHDSDateTime" Type="DateTime" Precision="3" />
+          <Property Name="MSProjLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Grh_Assignments">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Task_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Resource_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Percent_Work_Complete" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="C__Complete" Type="Double" />
+          <Property Name="Duration" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Actual_Work" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Scheduled_Work" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="nActualWork" Type="Double" />
+          <Property Name="nScheduled_Work" Type="Double" />
+          <Property Name="nDuration" Type="Double" />
+          <Property Name="xDuration" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="xActual_work" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="xSchedule_work" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Finish_Date" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Grh_Tasks">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ResourceNames" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Duration" Type="Int32" />
+          <Property Name="Finish_Date" Type="DateTime" Precision="3" />
+          <Property Name="OutlineLevel" Type="Int32" />
+          <Property Name="C__Complete" Type="Int32" />
+          <Property Name="Text21" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Resource_Role" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IsAProperty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FhFcPropertyID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsAFundSource" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OutlineNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PRJ_Assignment_Table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Task_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Resource_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="C__Work_Complete" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Work" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Units" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Resource_Table">
+          <Key>
+            <PropertyRef Name="Resource_tableID" />
+          </Key>
+          <Property Name="Resource_tableID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Material_Label" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Initials" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Group_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Max_Units" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Standard_Rate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Overtime_Rate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Cost_Per_Use" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Accrue_At" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Base_Calendar" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Department_Sequence" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PRj_TaskTemplate">
+          <Key>
+            <PropertyRef Name="Taskid" />
+          </Key>
+          <Property Name="Taskid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="Int32" />
+          <Property Name="Active" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Task_Mode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Duration" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Start" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Finish" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Predecessors" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Outline_Level" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Resource_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="C__Work_Complete" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Work" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Units" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Work_Item_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Area_Path" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Work_Item_Type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Iteration_Path" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Publish_and_Refresh" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="department" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Sequence" Type="Int32" />
+          <Property Name="PrePred" Type="Int32" />
+          <Property Name="Batchid" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="DQIEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DMSBatchControlLogs" EntityType="Self.DMSBatchControlLog" />
+          <EntitySet Name="Grh_Assignments" EntityType="Self.Grh_Assignments" />
+          <EntitySet Name="Grh_Tasks" EntityType="Self.Grh_Tasks" />
+          <EntitySet Name="PRJ_Assignment_Table" EntityType="Self.PRJ_Assignment_Table" />
+          <EntitySet Name="Resource_Table" EntityType="Self.Resource_Table" />
+          <EntitySet Name="PRj_TaskTemplate" EntityType="Self.PRj_TaskTemplate" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DQIModelStoreContainer" CdmEntityContainer="DQIEntities">
+          <EntitySetMapping Name="DMSBatchControlLogs">
+            <EntityTypeMapping TypeName="DQIModel.DMSBatchControlLog">
+              <MappingFragment StoreEntitySet="DMSBatchControlLog">
+                <ScalarProperty Name="DMSBatchControlLogID" ColumnName="DMSBatchControlLogID" />
+                <ScalarProperty Name="BatchNumber" ColumnName="BatchNumber" />
+                <ScalarProperty Name="BatchName" ColumnName="BatchName" />
+                <ScalarProperty Name="BatchDate" ColumnName="BatchDate" />
+                <ScalarProperty Name="HDSExtract" ColumnName="HDSExtract" />
+                <ScalarProperty Name="HDSExtractDate" ColumnName="HDSExtractDate" />
+                <ScalarProperty Name="MinPropertyId" ColumnName="MinPropertyId" />
+                <ScalarProperty Name="MaxPropertyId" ColumnName="MaxPropertyId" />
+                <ScalarProperty Name="SynchProject" ColumnName="SynchProject" />
+                <ScalarProperty Name="SynchSharePoint" ColumnName="SynchSharePoint" />
+                <ScalarProperty Name="SynchMDS" ColumnName="SynchMDS" />
+                <ScalarProperty Name="SynchHDS" ColumnName="SynchHDS" />
+                <ScalarProperty Name="SynchProjectDateTime" ColumnName="SynchProjectDateTime" />
+                <ScalarProperty Name="SynchSharePointDateTime" ColumnName="SynchSharePointDateTime" />
+                <ScalarProperty Name="SynchMDSDateTime" ColumnName="SynchMDSDateTime" />
+                <ScalarProperty Name="SynchHDSDateTime" ColumnName="SynchHDSDateTime" />
+                <ScalarProperty Name="MSProjLocation" ColumnName="MSProjLocation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Grh_Assignments">
+            <EntityTypeMapping TypeName="DQIModel.Grh_Assignments">
+              <MappingFragment StoreEntitySet="Grh_Assignments">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Task_Name" ColumnName="Task_Name" />
+                <ScalarProperty Name="Resource_Name" ColumnName="Resource_Name" />
+                <ScalarProperty Name="Percent_Work_Complete" ColumnName="Percent_Work_Complete" />
+                <ScalarProperty Name="C__Complete" ColumnName="% Complete" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="Actual_Work" ColumnName="Actual_Work" />
+                <ScalarProperty Name="Scheduled_Work" ColumnName="Scheduled_Work" />
+                <ScalarProperty Name="nActualWork" ColumnName="nActualWork" />
+                <ScalarProperty Name="nScheduled_Work" ColumnName="nScheduled_Work" />
+                <ScalarProperty Name="nDuration" ColumnName="nDuration" />
+                <ScalarProperty Name="xDuration" ColumnName="xDuration" />
+                <ScalarProperty Name="xActual_work" ColumnName="xActual_work" />
+                <ScalarProperty Name="xSchedule_work" ColumnName="xSchedule_work" />
+                <ScalarProperty Name="Finish_Date" ColumnName="Finish_Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Grh_Tasks">
+            <EntityTypeMapping TypeName="DQIModel.Grh_Tasks">
+              <MappingFragment StoreEntitySet="Grh_Tasks">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ResourceNames" ColumnName="ResourceNames" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="Finish_Date" ColumnName="Finish_Date" />
+                <ScalarProperty Name="OutlineLevel" ColumnName="OutlineLevel" />
+                <ScalarProperty Name="C__Complete" ColumnName="% Complete" />
+                <ScalarProperty Name="Text21" ColumnName="Text21" />
+                <ScalarProperty Name="Resource_Role" ColumnName="Resource_Role" />
+                <ScalarProperty Name="IsAProperty" ColumnName="IsAProperty" />
+                <ScalarProperty Name="FhFcPropertyID" ColumnName="FhFcPropertyID" />
+                <ScalarProperty Name="IsAFundSource" ColumnName="IsAFundSource" />
+                <ScalarProperty Name="OutlineNumber" ColumnName="OutlineNumber" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRJ_Assignment_Table">
+            <EntityTypeMapping TypeName="DQIModel.PRJ_Assignment_Table">
+              <MappingFragment StoreEntitySet="PRJ_Assignment_Table">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Task_Name" ColumnName="Task Name" />
+                <ScalarProperty Name="Resource_Name" ColumnName="Resource Name" />
+                <ScalarProperty Name="C__Work_Complete" ColumnName="% Work Complete" />
+                <ScalarProperty Name="Work" ColumnName="Work" />
+                <ScalarProperty Name="Units" ColumnName="Units" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Resource_Table">
+            <EntityTypeMapping TypeName="DQIModel.Resource_Table">
+              <MappingFragment StoreEntitySet="Resource_Table">
+                <ScalarProperty Name="Resource_tableID" ColumnName="Resource_tableID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Material_Label" ColumnName="Material_Label" />
+                <ScalarProperty Name="Initials" ColumnName="Initials" />
+                <ScalarProperty Name="Group_Name" ColumnName="Group_Name" />
+                <ScalarProperty Name="Max_Units" ColumnName="Max_Units" />
+                <ScalarProperty Name="Standard_Rate" ColumnName="Standard_Rate" />
+                <ScalarProperty Name="Overtime_Rate" ColumnName="Overtime_Rate" />
+                <ScalarProperty Name="Cost_Per_Use" ColumnName="Cost_Per_Use" />
+                <ScalarProperty Name="Accrue_At" ColumnName="Accrue_At" />
+                <ScalarProperty Name="Base_Calendar" ColumnName="Base_Calendar" />
+                <ScalarProperty Name="Department_Sequence" ColumnName="Department_Sequence" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRj_TaskTemplate">
+            <EntityTypeMapping TypeName="DQIModel.PRj_TaskTemplate">
+              <MappingFragment StoreEntitySet="PRj_TaskTemplate">
+                <ScalarProperty Name="Taskid" ColumnName="Taskid" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Task_Mode" ColumnName="Task Mode" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="Start" ColumnName="Start" />
+                <ScalarProperty Name="Finish" ColumnName="Finish" />
+                <ScalarProperty Name="Predecessors" ColumnName="Predecessors" />
+                <ScalarProperty Name="Outline_Level" ColumnName="Outline Level" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Resource_Name" ColumnName="Resource Name" />
+                <ScalarProperty Name="C__Work_Complete" ColumnName="% Work Complete" />
+                <ScalarProperty Name="Work" ColumnName="Work" />
+                <ScalarProperty Name="Units" ColumnName="Units" />
+                <ScalarProperty Name="Work_Item_ID" ColumnName="Work_Item_ID" />
+                <ScalarProperty Name="Area_Path" ColumnName="Area_Path" />
+                <ScalarProperty Name="Work_Item_Type" ColumnName="Work_Item_Type" />
+                <ScalarProperty Name="Iteration_Path" ColumnName="Iteration_Path" />
+                <ScalarProperty Name="Publish_and_Refresh" ColumnName="Publish_and_Refresh" />
+                <ScalarProperty Name="department" ColumnName="department" />
+                <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+                <ScalarProperty Name="PrePred" ColumnName="PrePred" />
+                <ScalarProperty Name="Batchid" ColumnName="Batchid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

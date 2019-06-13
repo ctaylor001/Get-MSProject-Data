@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DQIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DMSBatchControlLog">
+    <Key>
+      <PropertyRef Name="DMSBatchControlLogID" />
+    </Key>
+    <Property Name="DMSBatchControlLogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BatchNumber" Type="int" />
+    <Property Name="BatchName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BatchDate" Type="date" />
+    <Property Name="HDSExtract" Type="bit" />
+    <Property Name="HDSExtractDate" Type="date" />
+    <Property Name="MinPropertyId" Type="int" />
+    <Property Name="MaxPropertyId" Type="int" />
+    <Property Name="SynchProject" Type="bit" />
+    <Property Name="SynchSharePoint" Type="bit" />
+    <Property Name="SynchMDS" Type="bit" />
+    <Property Name="SynchHDS" Type="bit" />
+    <Property Name="SynchProjectDateTime" Type="datetime" />
+    <Property Name="SynchSharePointDateTime" Type="datetime" />
+    <Property Name="SynchMDSDateTime" Type="datetime" />
+    <Property Name="SynchHDSDateTime" Type="datetime" />
+    <Property Name="MSProjLocation" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Grh_Assignments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Task_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Resource_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Percent_Work_Complete" Type="nvarchar" MaxLength="255" />
+    <Property Name="% Complete" Type="float" />
+    <Property Name="Duration" Type="nvarchar" MaxLength="50" />
+    <Property Name="Actual_Work" Type="nvarchar" MaxLength="255" />
+    <Property Name="Scheduled_Work" Type="nvarchar" MaxLength="255" />
+    <Property Name="nActualWork" Type="float" />
+    <Property Name="nScheduled_Work" Type="float" />
+    <Property Name="nDuration" Type="float" />
+    <Property Name="xDuration" Type="nvarchar" MaxLength="50" />
+    <Property Name="xActual_work" Type="nvarchar" MaxLength="50" />
+    <Property Name="xSchedule_work" Type="nvarchar" MaxLength="50" />
+    <Property Name="Finish_Date" Type="date" />
+  </EntityType>
+  <EntityType Name="Grh_Tasks">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Status" Type="nvarchar" MaxLength="255" />
+    <Property Name="ResourceNames" Type="nvarchar" MaxLength="255" />
+    <Property Name="Duration" Type="int" />
+    <Property Name="Finish_Date" Type="datetime" />
+    <Property Name="OutlineLevel" Type="int" />
+    <Property Name="% Complete" Type="int" />
+    <Property Name="Text21" Type="nvarchar" MaxLength="255" />
+    <Property Name="Resource_Role" Type="nvarchar" MaxLength="255" />
+    <Property Name="IsAProperty" Type="nvarchar" MaxLength="50" />
+    <Property Name="FhFcPropertyID" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsAFundSource" Type="nvarchar" MaxLength="50" />
+    <Property Name="OutlineNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="PRJ_Assignment_Table">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Task Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Resource Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="% Work Complete" Type="nvarchar" MaxLength="255" />
+    <Property Name="Work" Type="nvarchar" MaxLength="255" />
+    <Property Name="Units" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DQI.dbo.PRj_TaskTemplate' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PRj_TaskTemplate">
+    <Key>
+      <PropertyRef Name="Taskid" />
+    </Key>
+    <Property Name="Taskid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Type="int" />
+    <Property Name="Active" Type="nvarchar" MaxLength="255" />
+    <Property Name="Task Mode" Type="nvarchar" MaxLength="255" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Duration" Type="nvarchar" MaxLength="255" />
+    <Property Name="Start" Type="nvarchar" MaxLength="255" />
+    <Property Name="Finish" Type="nvarchar" MaxLength="255" />
+    <Property Name="Predecessors" Type="nvarchar" MaxLength="255" />
+    <Property Name="Outline Level" Type="nvarchar" MaxLength="255" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="255" />
+    <Property Name="Resource Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="% Work Complete" Type="nvarchar" MaxLength="255" />
+    <Property Name="Work" Type="nvarchar" MaxLength="255" />
+    <Property Name="Units" Type="nvarchar" MaxLength="255" />
+    <Property Name="Work_Item_ID" Type="varchar" MaxLength="255" />
+    <Property Name="Area_Path" Type="varchar" MaxLength="255" />
+    <Property Name="Work_Item_Type" Type="varchar" MaxLength="255" />
+    <Property Name="Iteration_Path" Type="varchar" MaxLength="255" />
+    <Property Name="Publish_and_Refresh" Type="varchar" MaxLength="255" />
+    <Property Name="department" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sequence" Type="int" />
+    <Property Name="PrePred" Type="int" />
+    <Property Name="Batchid" Type="int" />
+  </EntityType>
+  <EntityType Name="Resource_Table">
+    <Key>
+      <PropertyRef Name="Resource_tableID" />
+    </Key>
+    <Property Name="Resource_tableID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="255" />
+    <Property Name="Material_Label" Type="nvarchar" MaxLength="255" />
+    <Property Name="Initials" Type="nvarchar" MaxLength="255" />
+    <Property Name="Group_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Max_Units" Type="nvarchar" MaxLength="255" />
+    <Property Name="Standard_Rate" Type="nvarchar" MaxLength="255" />
+    <Property Name="Overtime_Rate" Type="nvarchar" MaxLength="255" />
+    <Property Name="Cost_Per_Use" Type="nvarchar" MaxLength="255" />
+    <Property Name="Accrue_At" Type="nvarchar" MaxLength="255" />
+    <Property Name="Base_Calendar" Type="nvarchar" MaxLength="255" />
+    <Property Name="Department_Sequence" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="DQIModelStoreContainer">
+    <EntitySet Name="DMSBatchControlLog" EntityType="Self.DMSBatchControlLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Grh_Assignments" EntityType="Self.Grh_Assignments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Grh_Tasks" EntityType="Self.Grh_Tasks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRJ_Assignment_Table" EntityType="Self.PRJ_Assignment_Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Resource_Table" EntityType="Self.Resource_Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRj_TaskTemplate" EntityType="Self.PRj_TaskTemplate" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PRj_TaskTemplate].[Taskid] AS [Taskid], 
+    [PRj_TaskTemplate].[ID] AS [ID], 
+    [PRj_TaskTemplate].[Active] AS [Active], 
+    [PRj_TaskTemplate].[Task Mode] AS [Task Mode], 
+    [PRj_TaskTemplate].[Name] AS [Name], 
+    [PRj_TaskTemplate].[Duration] AS [Duration], 
+    [PRj_TaskTemplate].[Start] AS [Start], 
+    [PRj_TaskTemplate].[Finish] AS [Finish], 
+    [PRj_TaskTemplate].[Predecessors] AS [Predecessors], 
+    [PRj_TaskTemplate].[Outline Level] AS [Outline Level], 
+    [PRj_TaskTemplate].[Notes] AS [Notes], 
+    [PRj_TaskTemplate].[Resource Name] AS [Resource Name], 
+    [PRj_TaskTemplate].[% Work Complete] AS [% Work Complete], 
+    [PRj_TaskTemplate].[Work] AS [Work], 
+    [PRj_TaskTemplate].[Units] AS [Units], 
+    [PRj_TaskTemplate].[Work_Item_ID] AS [Work_Item_ID], 
+    [PRj_TaskTemplate].[Area_Path] AS [Area_Path], 
+    [PRj_TaskTemplate].[Work_Item_Type] AS [Work_Item_Type], 
+    [PRj_TaskTemplate].[Iteration_Path] AS [Iteration_Path], 
+    [PRj_TaskTemplate].[Publish_and_Refresh] AS [Publish_and_Refresh], 
+    [PRj_TaskTemplate].[department] AS [department], 
+    [PRj_TaskTemplate].[Sequence] AS [Sequence], 
+    [PRj_TaskTemplate].[PrePred] AS [PrePred], 
+    [PRj_TaskTemplate].[Batchid] AS [Batchid]
+    FROM [dbo].[PRj_TaskTemplate] AS [PRj_TaskTemplate]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

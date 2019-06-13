@@ -1,0 +1,12 @@
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQILogger\obj\Debug\DQILogger.Core.csproj.CoreCompileInputs.cache
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQILogger\obj\Debug\DQILogger.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQILogger\obj\Debug\DQILogger.pdb
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQILogger\bin\Debug\DQILogger.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQILogger\bin\Debug\DQILogger.pdb
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQILogger\bin\Debug\Serilog.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQILogger\bin\Debug\Serilog.Sinks.File.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQILogger\bin\Debug\Serilog.pdb
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQILogger\bin\Debug\Serilog.xml
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQILogger\bin\Debug\Serilog.Sinks.File.xml
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQILogger\obj\Debug\DQILogger.Core.csproj.CopyComplete
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQILogger\obj\Debug\DQILogger.Core.csprojAssemblyReference.cache

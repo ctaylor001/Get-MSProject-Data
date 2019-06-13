@@ -1,0 +1,12 @@
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQIDB\bin\Debug\DQIDB.dll.config
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQIDB\bin\Debug\DQIDB.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQIDB\bin\Debug\DQIDB.pdb
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQIDB\bin\Debug\EntityFramework.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQIDB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQIDB\bin\Debug\EntityFramework.xml
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQIDB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQIDB\obj\Debug\DQIDB.csprojAssemblyReference.cache
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQIDB\obj\Debug\DQIDB.csproj.CoreCompileInputs.cache
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQIDB\obj\Debug\DQIDB.csproj.CopyComplete
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQIDB\obj\Debug\DQIDB.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\DQIDB\obj\Debug\DQIDB.pdb

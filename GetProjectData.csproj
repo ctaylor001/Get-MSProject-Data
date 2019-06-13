@@ -106,8 +106,15 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.2.8.0\lib\net46\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.Sinks.File.4.0.0\lib\net45\Serilog.Sinks.File.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -195,9 +202,13 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DQIDB\DQIDB.csproj">
-      <Project>{a56059b2-2fc1-492d-870a-2f36312686aa}</Project>
+    <ProjectReference Include="DQIDB\DQIDB.csproj">
+      <Project>{c3d8c8ab-5267-48ad-8960-6578e0e2362d}</Project>
       <Name>DQIDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="DQILogger\DQILogger.Core.csproj">
+      <Project>{1914f4f1-e715-478e-ae4b-901df0b15082}</Project>
+      <Name>DQILogger.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
