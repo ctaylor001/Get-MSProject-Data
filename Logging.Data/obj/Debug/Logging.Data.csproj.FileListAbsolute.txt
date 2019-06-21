@@ -1,0 +1,12 @@
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\Logging.Data\bin\Debug\Logging.Data.dll.config
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\Logging.Data\bin\Debug\Logging.Data.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\Logging.Data\bin\Debug\Logging.Data.pdb
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\Logging.Data\bin\Debug\EntityFramework.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\Logging.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\Logging.Data\bin\Debug\EntityFramework.xml
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\Logging.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\Logging.Data\obj\Debug\Logging.Data.csprojAssemblyReference.cache
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\Logging.Data\obj\Debug\Logging.Data.csproj.CoreCompileInputs.cache
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\Logging.Data\obj\Debug\Logging.Data.csproj.CopyComplete
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\Logging.Data\obj\Debug\Logging.Data.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\Logging.Data\obj\Debug\Logging.Data.pdb

@@ -12,14 +12,19 @@ namespace DQIDB
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+    using System.Data.Entity.Infrastructure.Interception;
+    using Logging.Data.CustomEntityFramework;
+
+
     public partial class DQIEntities : DbContext
     {
+
         public DQIEntities()
             : base("name=DQIEntities")
         {
+            DbInterception.Add(new LoggerEFInterceptor());
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

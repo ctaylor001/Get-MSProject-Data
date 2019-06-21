@@ -113,5 +113,11 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logging.Data\Logging.Data.csproj">
+      <Project>{471e2eee-f8f8-4097-aa87-b78ced3411f2}</Project>
+      <Name>Logging.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

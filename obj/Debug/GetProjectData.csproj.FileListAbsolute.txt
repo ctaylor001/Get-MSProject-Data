@@ -41,3 +41,6 @@ C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\DQILogger.pdb
 C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\Serilog.pdb
 C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\Serilog.xml
 C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\Serilog.Sinks.File.xml
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\Logging.Data.dll
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\Logging.Data.pdb
+C:\Users\ctaylor\source\repos\Proj-IT-DQI-DashBoard\bin\Debug\Logging.Data.dll.config

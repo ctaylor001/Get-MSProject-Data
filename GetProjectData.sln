@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DQILogger.Core", "DQILogger
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DQIDB", "DQIDB\DQIDB.csproj", "{C3D8C8AB-5267-48AD-8960-6578E0E2362D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging.Data", "Logging.Data\Logging.Data.csproj", "{471E2EEE-F8F8-4097-AA87-B78CED3411F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C3D8C8AB-5267-48AD-8960-6578E0E2362D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3D8C8AB-5267-48AD-8960-6578E0E2362D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3D8C8AB-5267-48AD-8960-6578E0E2362D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{471E2EEE-F8F8-4097-AA87-B78CED3411F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{471E2EEE-F8F8-4097-AA87-B78CED3411F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{471E2EEE-F8F8-4097-AA87-B78CED3411F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{471E2EEE-F8F8-4097-AA87-B78CED3411F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
